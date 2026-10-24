@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clipdrop Image Generator</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+        .box {
+            width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #ccc;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+        }
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h2 { text-align: center; }
+        .error { color: red; text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>Clipdrop AI Image Generator</h2>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="post" action="/generate-image">
+        <label>Enter Image Prompt</label><br><br>
+        <textarea name="prompt" required
+        placeholder="A futuristic AI robot in cyberpunk city"></textarea>
+
+        <button type="submit">Generate Image</button>
+    </form>
+</div>
+
+</body>
+</html>
