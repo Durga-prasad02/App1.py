@@ -1,0 +1,34 @@
+{
+  "project_title": "Design and Development of a Working Prototype for Waste segregation image classifier Using A CNN trained on waste-category images",
+  "author": "AGGIBADALA VENKATA DURGA NAGA PRASAD",
+  "guide": "Ms. G. Hema Sri",
+  "domain": "Deep Learning & Computer Vision",
+  "model_architecture": "WasteCNN 4-Stage Deep Convolutional Neural Network",
+  "input_shape": [3, 224, 224],
+  "num_classes": 6,
+  "classes": [
+    "Cardboard",
+    "Glass",
+    "Metal",
+    "Paper",
+    "Plastic",
+    "Organic / Food Waste"
+  ],
+  "metrics": {
+    "accuracy": 0.9533,
+    "macro_precision": 0.9534,
+    "macro_recall": 0.9533,
+    "macro_f1": 0.9533,
+    "inference_latency_ms": 18.4,
+    "model_size_mb": 9.6,
+    "total_parameters": 2415846
+  },
+  "training_hyperparameters": {
+    "optimizer": "Adam",
+    "learning_rate": 0.0003,
+    "batch_size": 32,
+    "epochs": 25,
+    "loss_function": "CrossEntropyLoss",
+    "weight_decay": 0.0001
+  }
+}
